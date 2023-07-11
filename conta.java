@@ -1,16 +1,28 @@
+import java.util.Locale;
+import java.util.Scanner;
 
-public class contaTerminal {
-	
+public class conta {
+    
 	public static void main(String[] args) {
+
+        Scanner scanner  = new Scanner(System.in).useLocale(Locale.US);
+
+		System.out.println("Por favor digite o número da agência:");
+        String Numero_Agencia = scanner.next();
+
+        System.out.println("Digite o número da conta:");
+        int Numero_Conta = scanner.nextInt();
+
+        System.out.println("Digite seu nome:");
+        String Nome_Cliente = scanner.next();
+
+        System.out.println("Digite o saldo:");
+        double Saldo = scanner.nextDouble();
 		
-		String nome = args[0];
-        String sobrenome = args[1];
-		int idade = Integer.valueOf(args[2]);
-		double altura = Double.valueOf(args[3]);
+		System.out.println( "Ola " +  Nome_Cliente + ", obrigado por criar uma conta em nosso banco, sua agencia é " +  Numero_Agencia + ", sua conta é "  +  Numero_Conta +  ", seu saldo é de R$ " +   Saldo + " e já está disponível na conta" );
 		
-		System.out.println("Ola, me chamo " + nome + " " + sobrenome);
-		System.out.println("Tenho " + idade + " anos ");
-		System.out.println("Minha altura é " + altura + "cm ");
 
     }
 }
+
+
